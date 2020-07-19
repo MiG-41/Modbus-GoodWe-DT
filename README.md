@@ -14,7 +14,7 @@ where:
 F7 - adress o inwerter (247 in HEX: F7)
 03 - Function Code 3 (read Analog Output Holding Registers)
 0300: The Data Address of the first register requested.( 0300 hex = 768)
-007C: The total number of registers requested. (read 124 registers 768 to 892) 
+007C: The total number of registers requested. (read 124 registers 768 to 891) 
 50F9: The CRC16-MODBUS  (cyclic redundancy check) for error checking.
 
 
@@ -33,4 +33,45 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 772 | 10 11 | 09 0E | 090E hex = 2318  231.8V | AC Voltage on L1 |
 | 773 | 12 13 | 09 63 | 0963 hex = 2403  240.3V | AC Voltage on L2 |
 | 774 | 14 15 | 09 57 | 0957 hex = 2391  239.1V | AC Voltage on L3 |
-| 775 | 16 17 | 09 0E | 090E hex = 2318  231.8V | AC Voltage on L1 |
+| 775 | 16 17 | 00 33 | 0033 hex = 51  5.1A | AC Current on L1 |
+| 776 | 18 19 | 00 32 | 0032 hex = 50  5.0A | AC Current on L2 |
+| 777 | 20 21 | 00 31 | 0031 hex = 49  4.9A | AC Current on L3 |
+| 778 | 22 23 | 13 86 | 1386 hex = 4998 49.98Hz | AC Frequency on L1 |
+| 779 | 24 25 | 13 86 | 1386 hex = 4998 49.98Hz | AC Frequency on L2 |
+| 780 | 26 27 | 13 87 | 1387 hex = 4999 49.99Hz | AC Frequency on L3 |
+| 781 | 28 29 | 0D E9 | 0DE9 hex = 3561 3561W | Actual Power |
+| 782 | 30 31 | 00 01 | 0001 hex = 1 | Status ;0-Pause/Waiting , 1-Working , 2 - Error? |
+| 783 | 32 33 | 01 AD | 01AD hex = 429 42.9deg | Inner Temperature |
+| 784 | 34 35 | 00 00 |  | Error Message H |
+| 785 | 36 37 | 00 00 |  | Error Message L |
+| 786 | 38 39 | 00 00 |  | Energy Total H ? |
+| 787 | 40 41 | 01 16 | 0116 hex = 278 kWh  | Energy Total L |
+| 788 | 42 43 | 00 00 |  | Working Hours Total H |
+| 789 | 44 45 | 00 17 | 0017 hex = 23h  | Working Hours Total L |
+| 790 | 46 47 | 07 7F | 077F hex = 1919 191.9deg  | TemperatureFaultValue |
+| 791 | 48 49 | 00 00 |  | PV1FaultVault ?|
+| 792 | 50 51 | 00 6B | 006B hex = 107 0.7V  | PV2FaultVault |
+| 793 | 52 53 | 00 00 |  | Line1VFaultValue |
+| 794 | 54 55 | 01 A6 | 01A6 hex = 422 42.2V | Line2VFaultValue |
+| 795 | 56 57 | 02 98 | 0298 hex = 664 66.4V | Line3VFaultValue |
+| 796 | 58 59 | 19 1B | 191B hex = 6427 64.27Hz | Line1FFaultValue |
+| 797 | 60 61 | 0C 74 | 0C74 hex = 3188 31.88Hz | Line2FFaultValue |
+| 798 | 62 63 | 00 00 |  | Line3FFaultValue |
+| 799 | 64 65 | 00 06 | 0006 hex = 6 6mA | GFC1FaultValue |
+| 800 | 66 67 | 00 2A | 002A hex = 42 4.2kWh | Energy Today |
+| 801 - 826 | 66 - 119 | 00 00 | | 0 bytes |
+| 827 | 120 121 | 14 07 | +1 each day ? | Date ?|
+| 828 | 122 123 | 12 09 | +1 each hour | Time ?|
+| 829 | 124 125 | 0F 28 | +1 each second ? | Time ?|
+| 830 | 126 - 127 | 00 00 | | 0 bytes |
+| 831 | 128 - 129 | 00 3B | | Safety Country code ? |
+| 830 - 851 | 130 - 169 | 00 00 | | 0 bytes |
+| 852 | 170 171 | 00 0C | 000C hex = 12 | ? |
+| 853 - 884 |172 - 235 | 00 00 | | 0 bytes|
+| 885 | 236 - 237 | 27 10 | 2710 hex = 10 000 W | Inverter power |
+| 886 |238 239 | 00 00 | | 0 bytes|
+|887 - 890| 240 - 247 | 47 57 32 35 4B 2D 44 54 | 475732354B2D4454 hex to ASCI gives GW25K-DT | Model name |
+|891| 248 249 | 20 20 | | ? |
+| - | 250-251| 40 30 | CRC16-MODBUS |
+
+
