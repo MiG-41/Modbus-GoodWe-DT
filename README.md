@@ -24,7 +24,7 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 
 |Register # | Byte# | Possible Value | Value Decrypt | Value Description |
 | :---- | ----- | ----- |----- | ----:|
-| - | 00 | F7 | F7 hex = 247  | Adres from where this responce recived  |
+| - | 00 | F7 | F7 hex = 247  | Addres from where this responce recived  |
 | - | 01 | 03 | Function Code 3 | read Analog Output Holding Registers |
 | 768 | 02 03 | 18 38 | 1838 hex = 6200  620.0V | DC Voltage on PV1 |
 | 769 | 04 05 | 18 5B | 185B hex = 6235  623.5V | DC Voltage on PV2 |
@@ -46,10 +46,10 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 785 | 36 37 | 00 00 |  | Error Message L |
 | 786 | 38 39 | 00 00 |  | Energy Total H ? |
 | 787 | 40 41 | 01 16 | 0116 hex = 278 kWh  | Energy Total L |
-| 788 | 42 43 | 00 00 |  | Working Hours Total H |
+| 788 | 42 43 | 00 00 |  | Working Hours Total H ? |
 | 789 | 44 45 | 00 17 | 0017 hex = 23h  | Working Hours Total L |
 | 790 | 46 47 | 07 7F | 077F hex = 1919 191.9deg  | TemperatureFaultValue |
-| 791 | 48 49 | 00 00 |  | PV1FaultVault ?|
+| 791 | 48 49 | 00 00 |  | PV1FaultVault |
 | 792 | 50 51 | 00 6B | 006B hex = 107 0.7V  | PV2FaultVault |
 | 793 | 52 53 | 00 00 |  | Line1VFaultValue |
 | 794 | 54 55 | 01 A6 | 01A6 hex = 422 42.2V | Line2VFaultValue |
