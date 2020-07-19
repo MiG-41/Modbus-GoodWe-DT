@@ -40,7 +40,7 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 779 | 24 25 | 13 86 | 1386 hex = 4998 49.98Hz | AC Frequency on L2 |
 | 780 | 26 27 | 13 87 | 1387 hex = 4999 49.99Hz | AC Frequency on L3 |
 | 781 | 28 29 | 0D E9 | 0DE9 hex = 3561 3561W | Actual Power |
-| 782 | 30 31 | 00 01 | 0001 hex = 1 | Status ;0-Pause/Waiting , 1-Working , 2 - Error? |
+| 782 | 30 31 | 00 01 | 0001 hex = 1 | Status ;0-Pause/Waiting , 1-Working , 2 - Error |
 | 783 | 32 33 | 01 AD | 01AD hex = 429 42.9deg | Inner Temperature |
 | 784 | 34 35 | 00 00 |  | Error Message H |
 | 785 | 36 37 | 00 00 |  | Error Message L |
@@ -60,9 +60,9 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 799 | 64 65 | 00 06 | 0006 hex = 6 6mA | GFC1FaultValue |
 | 800 | 66 67 | 00 2A | 002A hex = 42 4.2kWh | Energy Today |
 | 801 - 826 | 66 - 119 | 00 00 | | 0 bytes |
-| 827 | 120 121 | 14 07 | +1 each day ? | Date ?|
-| 828 | 122 123 | 12 09 | +1 each hour | Time ?|
-| 829 | 124 125 | 0F 28 | +1 each second ? | Time ?|
+| 827 | 120 121 | 14 07 |  | Date ?|
+| 828 | 122 123 | 12 09 |  | Time ?|
+| 829 | 124 125 | 0F 28 |  | Time ?|
 | 830 | 126 - 127 | 00 00 | | 0 bytes |
 | 831 | 128 - 129 | 00 3B | | Safety Country code ? |
 | 830 - 851 | 130 - 169 | 00 00 | | 0 bytes |
@@ -73,4 +73,38 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 |887 - 891| 240 - 249 | 47 57 32 35 4B 2D 44 54 20 20 | 475732354B2D44542020 hex to ASCI gives GW25K-DT | Model name |
 | - | 250-251| 40 30 | CRC16-MODBUS |
 
-
+Error masages (784+785 combined) on first look maches with standard GoodWe protocol. (generated  only  Utility loss and Insulation failure errors)
+|Bit # | Error Message |  Description |
+| :---- | ----- | ----:|
+| Bit31 | Internal Communication Failure | Communication between microcontrollers is failure  |
+| Bit30 | EEPROM R/W Failure | EEPROM cannot be read or written |
+| Bit29 | Fac Failure | The grid frequency is out of tolerable range |
+| Bit28 | TBD | N/A |
+| Bit27 | TBD | N/A |
+| Bit26 | TBD | N/A |
+| Bit25 | Relay Check Failure | Relay check is failure |
+| Bit24 | TBD | N/A |
+| Bit23 | Vac Consistency Failure | Different value between Master and Slave for grid voltage |
+| Bit22 | Fac Consistency Failure | Different value between Master and Slave for grid frequency |
+| Bit21 | TBD | N/A |
+| Bit20 | TBD | N/A |
+| Bit19 | DC Injection High | The DC injection to grid is too high  |
+| Bit18 | Isolation Failure | Isolation resistance of PV-plant out of tolerable range |
+| Bit17 | Vac Failure | Grid voltage out of tolerable range  |
+| Bit16 | Fan Failure | Fan Lock |
+| Bit15 | PV Over Voltage | Pv input voltage is over the tolerable maximum value |
+| Bit14 | Auto Test Failure | Auto test failure |
+| Bit13 | Over Temperature | Temperature is too high |
+| Bit12 | Internal Version Unmatch | Master and slave firmware version is unmatch |
+| Bit11 | DC Bus High | Dc bus is too high |
+| Bit10 | Gournd I Failure | Ground current is too high |
+| Bit9 | Utility Loss | Utility is unavailable |
+| Bit8 | TBD | N/A |
+| Bit7 | TBD | N/A |
+| Bit6 | TBD | N/A |
+| Bit5 | TBD | N/A |
+| Bit4 | GFCI Consistency Failure | Different value between Master and Slave for GFCI |
+| Bit3 | DCI Consistency Failure | Different value between Master and Slave for output DC current |
+| Bit2 | TBD | N/A |
+| Bit1 | AC HCT Failure | The output current sensor is abnormal |
+| Bit0 | GFCI Device Failure | The GFCI detecting circuit is abnormal |
