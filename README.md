@@ -26,6 +26,7 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | :---- | ----- | ----- |----- | ----:|
 | - | 00 | F7 | F7 hex = 247  | Addres from where this responce recived  |
 | - | 01 | 03 | Function Code 3 | read Analog Output Holding Registers |
+| - | 02 | F8 | Data length (Packet length = Data length + 5) |  |
 | 768 | 02 03 | 18 38 | 1838 hex = 6200  620.0V | DC Voltage on PV1 |
 | 769 | 04 05 | 18 5B | 185B hex = 6235  623.5V | DC Voltage on PV2 |
 | 770 | 06 07 | 00 1B | 001B hex = 27  2.7A | DC Current on PV1 |
