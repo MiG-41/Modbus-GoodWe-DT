@@ -46,7 +46,7 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 784 | 35 36 | 00 00 |  | Error Message H |
 | 785 | 37 38 | 00 00 |  | Error Message L |
 | 786 | 39 40 | 00 00 |  | Energy Total H ? |
-| 787 | 41 42 | 01 16 | 0116 hex = 278 kWh  | Energy Total L |
+| 787 | 41 42 | 01 16 | 0116 hex = 278 27,8kWh | Energy Total L |
 | 788 | 43 44 | 00 00 |  | Working Hours Total H ? |
 | 789 | 45 46 | 00 17 | 0017 hex = 23h  | Working Hours Total L |
 | 790 | 47 48 | 07 7F | 077F hex = 1919 191.9deg  | TemperatureFaultValue |
