@@ -41,7 +41,7 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 779 | 25 26 | 13 86 | 1386 hex = 4998 49.98Hz | AC Frequency on L2 |
 | 780 | 27 28 | 13 87 | 1387 hex = 4999 49.99Hz | AC Frequency on L3 |
 | 781 | 29 30 | 0D E9 | 0DE9 hex = 3561 3561W | Actual Power |
-| 782 | 31 32 | 00 01 | 0001 hex = 1 | Status ;0-Pause/Waiting , 1-Working , 2 - Error |
+| 782 | 31 32 | 00 01 | 0001 hex = 1 | Status: 0-Pause/Waiting , 1-Working , 2 - Error |
 | 783 | 33 34 | 01 AD | 01AD hex = 429 42.9deg | Inner Temperature |
 | 784 | 35 36 | 00 00 |  | Error Message H |
 | 785 | 37 38 | 00 00 |  | Error Message L |
@@ -71,7 +71,7 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 853 - 884 |173 - 236 | 00 00 | | 0 bytes|
 | 885 | 237 - 238 | 27 10 | 2710 hex = 10 000 W | Inverter power |
 | 886 |239 240 | 00 00 | | 0 bytes|
-|887 - 891| 241 - 250 | 47 57 32 35 4B 2D 44 54 20 20 | 475732354B2D44542020 hex to ASCI gives GW25K-DT | Model name |
+|887 - 891| 241 - 250 | 47 57 32 35 4B 2D 44 54 20 20 | 475732354B2D44542020 hex to ASCII gives GW25K-DT | Model name |
 | - | 251-252| 40 30 | CRC16-MODBUS | |
 
 Error masages (784+785 combined) on first look maches with standard GoodWe protocol. (generated  only  Utility loss and Insulation failure errors)
