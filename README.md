@@ -6,12 +6,12 @@ Protocol description for modbus Goodwe DT inwerters
 Conection is made with parameters : 9600 baud , 8 data bits , 1 stop bit , parity None.
 
 # Description
-In DT series of GoodWe inwerters there is most probably standard modbus implemented. So to receive a full data we have to send to inverter's addres 247 (standard for GoodWe,changable in menu) a command for requesting the content of analog output holding registers ( function 03)  #768  to 891 ( in total 124 registers) a request: 
+In DT series of GoodWe inwerters there isstandard modbus implemented (in opposite to other GoodWe inverters with their own protocol). So to receive a full data we have to send to inverter's addres 247 (standard for GoodWe,changable in menu) a command for requesting the content of analog output holding registers ( function 03)  #768  to #891 ( in total 124 registers) a request: 
 
 F7 03 0300 007C 50F9
 
 where: \
-F7 - adress o inwerter (247 in HEX: F7) \
+F7 - inwerter adress (247 in HEX: F7) \
 03 - Function Code 3 (read Analog Output Holding Registers) \
 0300: The Data Address of the first register requested.( 0300 hex = 768)\
 007C: The total number of registers requested. (read 124 registers 768 to 891) \
