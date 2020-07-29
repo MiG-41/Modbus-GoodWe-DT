@@ -61,9 +61,9 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 | 799 | 65 66 | 00 06 | 0006 hex = 6 6mA | GFC1FaultValue |
 | 800 | 67 68 | 00 2A | 002A hex = 42 4.2kWh | Energy Today |
 | 801 - 826 | 69 - 120 | 00 00 | | 0 bytes |
-| 827 | 121 122 | 14 07 |  | Date ?|
-| 828 | 123 124 | 12 09 |  | Time ?|
-| 829 | 125 126 | 0F 28 |  | Time ?|
+| 827 | 121 122 | 14 07 |14hex = 20 2020year 07hex - 07 month  | Date |
+| 828 | 123 124 | 12 09 |12hex = 18 day 09hex= 09 hour  | Date/Time |
+| 829 | 125 126 | 0F 28 | 0Fhex =  16 min 28hex = 40s  | Time |
 | 830 | 127 - 128 | 00 00 | | 0 bytes |
 | 831 | 129 - 130 | 00 3B | 003B hex = 59 | Measurement during start, leackage current ? |
 | 830 - 851 | 131 - 170 | 00 00 | | 0 bytes |
