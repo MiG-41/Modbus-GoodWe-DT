@@ -74,7 +74,8 @@ F7 03 F8 18 38 18 5B 00 1B 00 1C 09 0E 09 63 09 57 00 33 00 32 00 31 13 86 13 86
 |887 - 891| 241 - 250 | 47 57 32 35 4B 2D 44 54 20 20 | 475732354B2D44542020 hex to ASCII gives GW25K-DT | Model name |
 | - | 251-252| 40 30 | CRC16-MODBUS | |
 
-Error masages (784+785 combined) on first look maches with standard GoodWe protocol. (generated  only  Utility loss and Insulation failure errors)
+Error masages (784+785 combined) on first look maches with standard GoodWe protocol.
+
 |Bit # | Error Message |  Description |
 | :---- | ----- | ----:|
 | Bit31 | Internal Communication Failure | Communication between microcontrollers is failure  |
