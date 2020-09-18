@@ -110,3 +110,7 @@ Error masages (784+785 combined) on first look maches with standard GoodWe proto
 | Bit2 | TBD | N/A |
 | Bit1 | AC HCT Failure | The output current sensor is abnormal |
 | Bit0 | GFCI Device Failure | The GFCI detecting circuit is abnormal |
+
+
+# TO DO:
+- find steering commands ( setting Power Factor , setting Power Limit , Stop/Start , ect.)
